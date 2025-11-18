@@ -8,12 +8,20 @@ type SearchBarProps = {
 
 export const SearchBar: FC<SearchBarProps> = ({ searchTerm, onChange }) => {
   return (
-    <TextField
-      label="Search products"
-      variant="outlined"
-      size={"small"}
-      value={searchTerm}
-      onChange={onChange}
-    />
+    <div className="w-full max-w-md">
+      <TextField
+        fullWidth
+        label="Search products"
+        variant="outlined"
+        size="small"
+        value={searchTerm}
+        onChange={onChange}
+        className="
+          bg-white rounded-xl shadow-sm
+          transition
+          hover:shadow-md
+        "
+      />
+    </div>
   );
 };
