@@ -10,25 +10,36 @@ export const ProductDetails = () => {
 
   const { id } = params;
   const [product, setProduct] = useState<Product | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onGoBack = () => {
     navigate("/");
   };
 
   useEffect(() => {
-    const onLoad = () => {
+    const onLoad = async () => {
       if (!id) return;
-      const fetchedProdcut = getById(id);
+      setIsLoading(true);
+      const fetchedProdcut = await getById(id);
       setProduct(fetchedProdcut);
+      setIsLoading(false);
     };
 
     onLoad();
   }, [id]);
 
-  if (!product) {
+  if (isLoading) {
     return (
       <div className="page-wrapper">
         <p className="text-lg text-slate-500">Loading product...</p>
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div className="page-wrapper">
+        <p className="text-lg text-slate-500">Product not found.</p>
       </div>
     );
   }

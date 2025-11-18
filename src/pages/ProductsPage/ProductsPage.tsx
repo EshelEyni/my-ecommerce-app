@@ -13,8 +13,8 @@ export const ProductsPage = () => {
   };
 
   useEffect(() => {
-    const onLoadProdcuts = () => {
-      const fetchProdcuts = getAll(searchTerm);
+    const onLoadProdcuts = async () => {
+      const fetchProdcuts = await getAll(searchTerm);
       setProducts(fetchProdcuts);
     };
 

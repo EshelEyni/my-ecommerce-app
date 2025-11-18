@@ -1,19 +1,25 @@
 import products from "../assets/products.json";
 import type { Product } from "../types/product";
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const getAll = (searchTerm: string): Product[] => {
+export const getAll = async (searchTerm: string): Promise<Product[]> => {
+  await delay(3000); // artificial 3-second delay
+
   if (!searchTerm) return products as Product[];
+
   const filteredProducts = products.filter((product) =>
-    product.name.includes(searchTerm)
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return filteredProducts as Product[];
 };
 
-export const getById = (id: string): Product | null => {
+export const getById = async (id: string): Promise<Product | null> => {
+  await delay(3000); // artificial 3-second delay
+
   const fetchedProduct = (products as Product[]).find(
     (product) => product.id === id
   );
 
-  if (!fetchedProduct) return null;
-  return fetchedProduct;
+  return fetchedProduct ?? null;
 };
