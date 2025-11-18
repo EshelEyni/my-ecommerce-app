@@ -28,7 +28,7 @@ export const ProductDetails = () => {
   const isValidProductId = id && product !== null && !isLoading;
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper items-start">
       <div className="mx-auto max-w-4xl w-full rounded-2xl bg-white p-6 shadow-lg md:p-8">
         {isLoading && (
           <p className="text-lg text-slate-500 mt-2 mx-auto w-fit">
