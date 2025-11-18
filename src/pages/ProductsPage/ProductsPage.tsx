@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import type { Product } from "../../types/Product";
 import { getAll } from "../../services/dataService";
-import { SearchBar } from "../ProductDetails/components/SearchBar";
-import { ProductPreview } from "../ProductDetails/components/ProductPreview";
+import { SearchBar } from "./components/SearchBar";
+import { ProductPreview } from "./components/ProductPreview";
 
 export const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
