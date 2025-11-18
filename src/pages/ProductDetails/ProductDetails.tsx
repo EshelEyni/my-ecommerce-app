@@ -69,7 +69,6 @@ export const ProductDetails = () => {
               </p>
               <h1 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">
                 {name}
-                <p className="text-xs text-slate-400 font-normal">{id}</p>
               </h1>
             </div>
 
