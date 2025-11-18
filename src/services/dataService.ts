@@ -1,5 +1,5 @@
 import products from "../assets/products.json";
-import type { Product } from "../types/Product";
+import type { Product } from "../types/product";
 
 export const getAll = (searchTerm: string): Product[] => {
   if (!searchTerm) return products as Product[];

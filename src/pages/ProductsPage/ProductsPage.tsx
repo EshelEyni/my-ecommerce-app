@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Product } from "../../types/Product";
+import type { Product } from "../../types/product";
 import { getAll } from "../../services/dataService";
 import { SearchBar } from "./components/SearchBar";
 import { ProductPreview } from "./components/ProductPreview";
