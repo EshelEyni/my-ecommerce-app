@@ -1,7 +1,7 @@
 import products from "../assets/products.json";
 import type { Product } from "../types/product";
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-const DELAY_MS = 2000;
+const DELAY_MS = 1000;
 
 export const getAll = async (searchTerm: string): Promise<Product[]> => {
   await delay(DELAY_MS);
