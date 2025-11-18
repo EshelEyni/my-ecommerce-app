@@ -27,7 +27,7 @@ export const ProductDetails = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-slate-100 py-10 w-lvw flex justify-center">
+      <div className="page-wrapper">
         <p className="text-lg text-slate-500">Loading product...</p>
       </div>
     );
@@ -44,7 +44,7 @@ export const ProductDetails = () => {
   } = product;
 
   return (
-    <div className="min-h-screen bg-slate-100 py-10 w-lvw flex justify-center">
+    <div className="page-wrapper">
       <div className="mx-auto max-w-4xl rounded-2xl bg-white p-6 shadow-lg md:p-8">
         <button
           onClick={onGoBack}

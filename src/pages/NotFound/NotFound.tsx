@@ -6,7 +6,7 @@ export const NotFound = () => {
   const goHome = () => navigate("/");
 
   return (
-    <div className="min-h-screen bg-slate-100 py-10 w-lvw flex justify-center">
+    <div className="page-wrapper">
       <div className="bg-white shadow-lg rounded-2xl p-10 max-w-md w-full text-center h-fit">
         <h1 className="text-6xl font-extrabold text-slate-900 mb-4">404</h1>
 

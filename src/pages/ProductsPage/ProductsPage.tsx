@@ -22,7 +22,7 @@ export const ProductsPage = () => {
   }, [searchTerm]);
 
   return (
-    <section className="p-8 flex flex-col items-center w-lvw gap-10">
+    <section className="page-wrapper flex flex-col items-center justify-start gap-8">
       <SearchBar searchTerm={searchTerm} onChange={onChange} />
 
       <div className="w-3/4 flex flex-wrap gap-3.5 items-center justify-center">
